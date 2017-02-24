@@ -103,7 +103,7 @@ app.get('/api/vehicle'/*?email=UserEmail or ?userFirstStart=letters*/, function(
       }
     });
   } else {
-    db.get_vehicle_by_email([req.query.UserEmail], function(err, response) {
+    db.get_vehicle_by_email([req.query.userEmail], function(err, response) {
       if (err) {
         res.status(500).send(err);
       } else {
